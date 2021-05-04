@@ -29,8 +29,8 @@ body {
 =========================================== */
 .container {
   display: flex;
-  max-width: 50vw;
-  margin: 60px auto;
+  max-width: 550px;
+  margin: 50px auto;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -115,4 +115,27 @@ body {
   margin: 0;
   padding: 5px 20px;
   border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .container .pokemon {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .pokemon__attacks,
+  .container .pokemon__meta {
+    flex-wrap: wrap;
+  }
+
+  .container .pokemon__meta span,
+  .container .pokemon__attacks span,
+  .container .pokemon {
+    width: 100%;
+  }
+
+  .container .pokemon__meta span {
+    margin-bottom: 10px;
+  }
 }
