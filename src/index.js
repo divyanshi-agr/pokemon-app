@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ApolloClient } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client/react";
 
 const client = new ApolloClient({
   uri: "https://graphql-pokemon2.vercel.app/",
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
